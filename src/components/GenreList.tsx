@@ -36,7 +36,12 @@ function GenreList({ onSelectGenre, selectedGenre }: Props) {
               fontSize={"lg"}
               colorScheme={genre.id === selectedGenre?.id ? "facebook" : "gray"}
             >
-              {genre.name}
+              {/* {genre.name} */}
+              <p>
+                {genre.name && genre.name.length > 10
+                  ? genre.name.slice(0, 10) + "..."
+                  : genre.name}
+              </p>
             </Button>
           </HStack>
         </ListItem>
