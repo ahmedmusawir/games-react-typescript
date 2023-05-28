@@ -17,3 +17,9 @@ export interface Genre {
   name: string;
   image_background: string;
 }
+
+export interface GameQuery {
+  genre: Genre | null;
+  platform: Platform | null;
+  order: string | null;
+}
